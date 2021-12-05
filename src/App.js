@@ -29,18 +29,25 @@ function App() {
     return (cat.name.toUpperCase().includes(searchValue.toUpperCase()) || cat.coat.toUpperCase().includes(searchValue.toUpperCase()))
   })
 
+  const [listViewOn, setListViewOn] = useState(false)
+
+  const toggleListView = () => {
+    setListViewOn(!listViewOn);
+  }
+
   return (
     <div className="page-wrapper">
         <div className="top-nav">
-          <SearchBar searchValue={setSearchValue} />
+          <SearchBar searchValue={setSearchValue} setItemsView={toggleListView} listViewOn={listViewOn}/>
         </div>
         <div className="container">   
-        {searchValue && <span className="italic filter-by-text secondary-title">Filter by: "{searchValue}"</span>}     
-        <div className="card-view">
+        {searchValue && <span className="italic filter-by-text secondary-title">Filter by: "{searchValue}"</span>}  
+        {!listViewOn && <div className="card-view">
           {filteredCats.map((cat) => {
             return <Card catData={cat} key={cat.id}/>
           })}
-        </div>
+        </div>}   
+        
 
       </div>
     </div>

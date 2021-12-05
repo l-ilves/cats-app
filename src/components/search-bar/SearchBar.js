@@ -9,12 +9,11 @@ import { faBars, faGripHorizontal } from "@fortawesome/free-solid-svg-icons";
 library.add(faBars, faGripHorizontal);
 
 const SearchBar = (props) => {
-    const [listViewOn, setListViewOn] = useState(false)
     const search = (event) => {
         props.searchValue(event.target.value)
     }
     const toggleListView = (event) => {
-        setListViewOn(!listViewOn);
+        props.setItemsView();
     }
 
     return (
@@ -23,7 +22,7 @@ const SearchBar = (props) => {
             <button className="bttn toolbar-bttn" onClick={search}>Clear</button>
             <ViewToolbar onClick="setListViewOn">
 
-                {listViewOn ?                 <button className="bttn toolbar-bttn" onClick={toggleListView}><FontAwesomeIcon icon="grip-horizontal" /><span className="icon-label">Icon View</span></button> : <button className="bttn toolbar-bttn" onClick={toggleListView}>      
+                {props.listViewOn ?                 <button className="bttn toolbar-bttn icon-label-bttn" onClick={toggleListView}><FontAwesomeIcon icon="grip-horizontal" /><span className="icon-label">Icon View</span></button> : <button className="bttn toolbar-bttn" onClick={toggleListView}>      
                     <FontAwesomeIcon icon="bars" /><span className="icon-label">List View</span>
                 </button>}
 
