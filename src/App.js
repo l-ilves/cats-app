@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="page-wrapper">
-        <div className="margin-top-1em">
+        <div className="top-nav">
           <SearchBar searchValue={setSearchValue} />
         </div>
         <div className="container">   
@@ -41,6 +41,7 @@ function App() {
             return <Card catData={cat} key={cat.id}/>
           })}
         </div>
+
       </div>
     </div>
 
