@@ -5,6 +5,7 @@ import Card from './components/card-view/Card';
 import Fact from './components/card-view/Fact'
 import './styles/global.css'
 import SearchBar from './components/search-bar/SearchBar';
+import ListItem from './components/list-view/ListItem';
 
 function App() {
   const cats = [{
@@ -42,11 +43,13 @@ function App() {
         </div>
         <div className="container">   
         {searchValue && <span className="italic filter-by-text secondary-title">Filter by: "{searchValue}"</span>}  
-        {!listViewOn && <div className="card-view">
+        {!listViewOn ? <div className="card-view">
           {filteredCats.map((cat) => {
             return <Card catData={cat} key={cat.id}/>
           })}
-        </div>}   
+        </div> : <div className="list-view">{filteredCats.map((cat) => {
+          return <ListItem catData={cat} key={cat.id}/>
+        })}</div>}   
         
 
       </div>

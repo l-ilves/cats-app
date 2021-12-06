@@ -163,3 +163,43 @@ hr {
   align-items: end;
   justify-content: end;
 }
+
+.list-view {
+  /* background-color: lightpink; */
+}
+
+.list-view-item {
+  padding: 0.5em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: left;
+  background-color: white;
+  margin: 0.5em;
+  border-radius: 1em;
+}
+
+.list-item-img {
+  max-width: 75px;
+  max-height: 50;
+  object-fit: cover;
+}
+
+.list-item-img-container {
+  height: 80px;
+  width: 80px;
+  margin: 1em;
+  justify-content: start;
+  align-items: start;
+}
+
+.list-item-text {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.xl {
+  font-size: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
