@@ -40,8 +40,7 @@ body {
 
 .large-title {
   font-size: 1.5em;
-  padding-top: 1.5em;
-  padding-bottom: 2%;
+  padding-top: 1em;
   font-weight: 600;
 }
 
@@ -172,7 +171,7 @@ hr {
   padding: 0.5em;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: stretch;
   text-align: left;
   background-color: white;
   margin: 0.5em;
@@ -194,12 +193,21 @@ hr {
 }
 
 .list-item-text {
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
 }
 
-.xl {
-  font-size: 2em;
-  margin-left: 1em;
-  margin-right: 1em;
+hr {
+  border: 1px solid #a6e7dc;
+}
+
+.list-view-fact {
+  width: 100%;
+}
+
+.fact-wrapper {
+  /* margin: auto; */
+  text-align: start;
 }

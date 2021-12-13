@@ -11,7 +11,7 @@ const Card = (props) => {
             <ProfilePicture catData={props.catData} />
             <span className="large-title">{props.catData.name}</span> <span className="italic secondary-title">{props.catData.coat}</span>
             <hr />
-            <Fact />
+            <Fact cardFormatting={true} />
         </div>
     )
 }

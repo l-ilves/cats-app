@@ -5,8 +5,7 @@ import Button from './Button';
 const Fact = (props) => {
     const [fact, setFact] = useState('');
 
-
-       useEffect(() => {
+    useEffect(() => {
         fetch("https://catfact.ninja/fact")
         .then((res) => res.json())
         .then((catFact) => {
@@ -25,14 +24,15 @@ const Fact = (props) => {
     })
 
     return (
-        <div>
-            <div className="fact-container">
+        <div className="fact-wrapper">
+            <div className={`fact-container ${!props.cardFormatting && "list-view-fact"}`}>
                 <span className="weight-500">Fact:</span> {fact}
             </div>
-            <hr />
+            {props.cardFormatting && <>            <hr />
             <div className="bttn-container">
                 <Button bttnTitle="New Fact" generateNewFact={newFact}/>
-            </div>
+            </div></>}
+
         </div>
     )
 }
