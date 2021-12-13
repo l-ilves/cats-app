@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import ProfilePicture from './ProfilePicture';
 import '../../styles/global.css'
-import Fact from './Fact';
+import './card.css'
+import Fact from '../fact/Fact';
 
 
 const Card = (props) => {

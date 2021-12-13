@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react'
-import Button from './Button';
+import Button from '../card-view/Button';
+import '../fact/fact.css'
 
 
 const Fact = (props) => {

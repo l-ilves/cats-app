@@ -1,0 +1,31 @@
+.list-view-item {
+  padding: 0.5em;
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  text-align: left;
+  background-color: white;
+  margin: 0.5em;
+  border-radius: 1em;
+}
+
+.list-item-img {
+  max-width: 75px;
+  max-height: 50;
+  object-fit: cover;
+}
+
+.list-item-img-container {
+  height: 80px;
+  width: 80px;
+  margin: 1em;
+  justify-content: start;
+  align-items: start;
+}
+
+.list-item-text {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
-import Fact from '../card-view/Fact';
+import Fact from '../fact/Fact';
+import './list.css'
 
 const ListItem = (props) => {
     return (

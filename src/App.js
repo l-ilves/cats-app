@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import logo from './logo.svg';
 import './App.css';
 import Card from './components/card-view/Card';
-import Fact from './components/card-view/Fact'
+import Fact from './components/fact/Fact'
 import './styles/global.css'
 import SearchBar from './components/search-bar/SearchBar';
 import ListItem from './components/list-view/ListItem';

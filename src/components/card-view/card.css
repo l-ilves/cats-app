@@ -1,0 +1,17 @@
+.card-view {
+  flex-wrap: wrap;
+  flex-direction: row;
+  display: flex;
+}
+
+.card {
+  width: 26%;
+  height: 75vh;
+  max-height: 700px;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 2em;
+  background-color: #ffffff;
+  flex-direction: column;
+  display: flex;
+}

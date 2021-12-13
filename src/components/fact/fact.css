@@ -1,0 +1,16 @@
+.fact-container {
+  height: 125px;
+  overflow-y: scroll;
+}
+
+.fact-container::-webkit-scrollbar {
+  display: none;
+}
+
+.list-view-fact {
+  width: 100%;
+}
+
+.fact-wrapper {
+  text-align: start;
+}
